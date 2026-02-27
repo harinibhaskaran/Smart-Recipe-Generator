@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Recipe Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <div class="container">
+        <div class="glass-card">
+            <h1>🍳 Smart Recipe Generator</h1>
+
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Enter Your Name">
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="ingredients" placeholder="Enter Ingredients (comma separated)">
+            </div>
+
+            <div class="input-group">
+                <select id="typeFilter">
+                    <option value="all">Veg & Non-Veg</option>
+                    <option value="veg">Vegetarian</option>
+                    <option value="non-veg">Non-Vegetarian</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <select id="timeFilter">
+                    <option value="all">Any Cooking Time</option>
+                    <option value="15">Under 15 mins</option>
+                    <option value="30">Under 30 mins</option>
+                    <option value="60">Under 60 mins</option>
+                </select>
+            </div>
+
+            <button onclick="findRecipes()">Find Recipes</button>
+        </div>
+
+        <div id="output"></div>
+
+        <div class="favorites-section">
+            <h2>⭐ Favorite Recipes</h2>
+            <div id="favorites"></div>
+        </div>
+
+        <div class="feedback-section">
+            <h2>💬 Feedback</h2>
+            <textarea id="feedbackInput" placeholder="Write your feedback..."></textarea>
+            <button onclick="submitFeedback()">Submit Feedback</button>
+            <div id="feedbackList"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
